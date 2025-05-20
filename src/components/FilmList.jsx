@@ -27,9 +27,7 @@ const FilmList = () => {
         if (Object.hasOwn(langToCountry, language)) {
             return emojiFlags.countryCode(langToCountry[language]).emoji
         } else {
-            return <span>
-                {language}
-            </span>
+            return '🌐'
         }
     }
 
