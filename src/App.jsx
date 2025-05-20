@@ -1,12 +1,16 @@
+import { FilmProvider } from './context/FilmContext';
 import FilterForm from './components/FilterForm';
+import FilmList from './components/FilmList';
 
 
 function App() {
 
   return (
     <>
-
-      <FilterForm />
+      <FilmProvider>
+        <FilterForm />
+        <FilmList />
+      </FilmProvider>
 
     </>
   )

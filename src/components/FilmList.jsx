@@ -1,6 +1,9 @@
 import React from 'react'
+import { useFilm } from '../context/FilmContext'
 
-const FilmList = ({ film }) => {
+const FilmList = () => {
+
+    const { film } = useFilm();
 
     const createList = () => {
         return <ul>

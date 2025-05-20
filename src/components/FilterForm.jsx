@@ -1,12 +1,13 @@
 import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
-import FilmList from './FilmList';
+
+import { useFilm } from '../context/FilmContext';
 
 const FilterForm = () => {
 
-    const [film, setFilm] = useState();
     const [search, setSearch] = useState('');
+    const { setFilm } = useFilm();
 
     const submit = (e) => {
         e.preventDefault();
@@ -22,8 +23,6 @@ const FilterForm = () => {
                     <button>Invia</button>
                 </form>
             </header>
-
-            <FilmList film={film} />
 
         </div>
     )
