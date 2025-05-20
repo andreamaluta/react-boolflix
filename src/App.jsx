@@ -5,7 +5,10 @@ function App() {
 
   return (
     <>
-      <h1>Hello World</h1>
+      <header>
+        <input type="text" />
+        <button>Invia</button>
+      </header>
     </>
   )
 }
