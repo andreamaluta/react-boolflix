@@ -1,26 +1,39 @@
 import axios from 'axios'
 import { useState } from 'react'
+import { useEffect } from 'react';
 
 
 function App() {
 
   const [film, setFilm] = useState();
+  const [filteredFilm, setFilteredFilm] = useState();
+  const [search, setSearch] = useState('');
 
-  const url = 'https://api.themoviedb.org/3/search/movie?api_key=ede7653811e5ebe2dc037015dffde9ba&query=ritorno+al+futuro'
-
-  const filmCall = (url) => {
-    axios.get(url).then((res) => console.log(res.data.results))
-
+  const submit = (e) => {
+    e.preventDefault();
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=ede7653811e5ebe2dc037015dffde9ba&query=${search}`).then((res) => setFilm(res.data.results))
   }
 
   return (
     <>
       <header>
-        <input type="text" />
-        <button>Invia</button>
+        <form onSubmit={submit}>
+          <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
+          <button>Invia</button>
+        </form>
       </header>
 
-      {filmCall(url)}
+
+      {film == undefined ? <p>loading</p>
+
+        : <ul>
+          {film.map((f) => (
+            <li key={f.id}>
+              {f.title}
+            </li>
+          ))}
+        </ul>}
+
 
     </>
   )
