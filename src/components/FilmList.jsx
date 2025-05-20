@@ -50,9 +50,12 @@ const FilmList = () => {
     }
 
     return (
-        <div>
-            {film == undefined ? <p>Cerca i film</p> : createList()}
-        </div>
+        <>
+            <h2>Film</h2>
+            <div>
+                {film == undefined ? <p>Cerca i film</p> : createList()}
+            </div>
+        </>
     )
 }
 
