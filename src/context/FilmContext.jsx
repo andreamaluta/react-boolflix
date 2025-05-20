@@ -5,9 +5,10 @@ const FilmContext = createContext();
 
 function FilmProvider({ children }) {
     const [film, setFilm] = useState();
+    const [serie, setSerie] = useState();
 
     return (
-        <FilmContext.Provider value={{ film, setFilm }}>
+        <FilmContext.Provider value={{ film, setFilm, serie, setSerie }}>
             {children}
         </FilmContext.Provider>
     )
