@@ -10,8 +10,10 @@ function App() {
     <>
       <FilmProvider>
         <FilterForm />
-        <FilmList />
-        <SerieList />
+        <main>
+          <FilmList />
+          <SerieList />
+        </main>
       </FilmProvider>
 
     </>

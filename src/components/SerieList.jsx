@@ -31,7 +31,10 @@ const SerieList = () => {
 
     return (
         <>
-            <h2>Serie</h2>
+            <div className="container category">
+
+                <h2>Serie</h2>
+            </div>
             <div>
                 {serie == undefined ? <p>Cerca le serie</p> : createList()}
             </div>

@@ -10,26 +10,42 @@ const FilmList = () => {
     const { film } = useFilm();
 
     const createList = () => {
-        return <ul>
-            {film.map((f) => (
-                <li key={f.id}>
-                    <img src={createLink(f.poster_path)} alt="" />
-                    <br />
-                    {f.title}
-                    <br />
-                    {f.original_title}
-                    <br />
-                    {languageToFlag(f.original_language)}
-                    <br />
-                    <Stars vote={f.vote_average} />
-                </li>
-            ))}
+        return <ul className='list-unstyled'>
+            <div className="container">
+                <div className="row">
+                    {film.map((f) => (
+                        <div className="col-2 mb-3">
+                            <div className="card">
+                                <li key={f.id}>
+                                    <img src={createLink(f.poster_path)} alt="" className='card-img-top' />
+                                    <div className="card-body">
+                                        <div>
+                                            <h5>Titolo:</h5> {f.title}
+                                        </div>
+                                        <div>
+                                            <h5>Titolo originale:</h5>{f.original_title}
+                                        </div>
+                                        <div>
+                                            Lingua: {languageToFlag(f.original_language)}
+                                        </div>
+                                        <div>
+                                            Valutazione: <Stars vote={f.vote_average} />
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </ul>
     }
 
     return (
         <>
-            <h2>Film</h2>
+            <div className="container category">
+                <h2>Film</h2>
+            </div>
             <div>
                 {film == undefined ? <p>Cerca i film</p> : createList()}
             </div>

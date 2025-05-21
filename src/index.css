@@ -21,7 +21,6 @@ form input {
 
 }
 
-
 .logo img {
     width: 30%;
 }
@@ -32,6 +31,26 @@ form input {
     justify-content: center;
 }
 
+/* main */
+
+main {
+    background-color: rgb(44, 44, 44);
+}
+
+.category {
+    color: white;
+}
+
+/* card */
+
+.card {
+    text-align: center;
+    border: none;
+}
+
+.card-body {
+    display: none;
+}
 
 /* stars */
 i.fa-solid {
