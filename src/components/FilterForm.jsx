@@ -17,30 +17,30 @@ const FilterForm = () => {
     }
 
     return (
-        <div>
-            <header>
-                <div className="container">
-                    <div className="row header-row">
-                        <div className="col-4">
-                            <div className="logo">
-                                <img src="src\assets\img\Netflix_Logo_RGB.png" alt="" />
-                            </div>
-                        </div>
-                        <div className="col-8">
-                            <form onSubmit={submit}>
-                                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className='form-control' placeholder='Search' />
-                                <button className='btn btn-outline-light ms-3 '>Invia</button>
-                                <div className="account">
 
-                                </div>
-                            </form>
+        <header>
+            <div className="container">
+                <div className="row header-row">
+                    <div className="col-4">
+                        <div className="logo">
+                            <img src="src\assets\img\Netflix_Logo_RGB.png" alt="" />
                         </div>
-
                     </div>
-                </div>
-            </header>
+                    <div className="col-8">
+                        <form onSubmit={submit}>
+                            <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className='form-control' placeholder='Search' />
+                            <button className='btn btn-outline-light ms-3 '>Invia</button>
+                            <div className="account">
 
-        </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
     )
 }
 
