@@ -2,6 +2,7 @@ import React from 'react'
 
 import languageToFlag from '../function/FlagFunction';
 import createLink from '../function/PosterFunction';
+import Stars from './Stars';
 
 import { useFilm } from '../context/FilmContext'
 
@@ -22,7 +23,7 @@ const SerieList = () => {
                     <br />
                     {languageToFlag(item.original_language)}
                     < br />
-                    {item.vote_average}
+                    <Stars vote={item.vote_average} />
                 </li>
             ))}
         </ul>
