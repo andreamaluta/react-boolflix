@@ -48,7 +48,7 @@ const FilmList = () => {
                 <h2>Film</h2>
             </div>
             <div>
-                {film == undefined ? <p>Cerca i film</p> : createList()}
+                {film == undefined ? <p className='notList'>Nessun Film Cercato...</p> : createList()}
             </div>
         </>
     )

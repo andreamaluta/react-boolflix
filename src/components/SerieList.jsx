@@ -51,7 +51,7 @@ const SerieList = () => {
                 <h2>Serie TV</h2>
             </div>
             <div>
-                {serie == undefined ? <p>Cerca le serie</p> : createList()}
+                {serie == undefined ? <p className='notList'>Nessuna Serie Cercata...</p> : createList()}
             </div>
         </>
     )
