@@ -3,7 +3,7 @@ import React from 'react'
 import languageToFlag from '../function/FlagFunction';
 
 import { useFilm } from '../context/FilmContext'
-import emojiFlags from 'emoji-flags';
+
 
 const SerieList = () => {
 

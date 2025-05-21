@@ -8,10 +8,16 @@ const FilmList = () => {
 
     const { film } = useFilm();
 
+    const createLink = (posterLink) => {
+        return "https://image.tmdb.org/t/p/w185" + posterLink;
+    }
+
     const createList = () => {
         return <ul>
             {film.map((f) => (
                 <li key={f.id}>
+                    <img src={createLink(f.poster_path)} alt="" />
+                    <br />
                     {f.title}
                     <br />
                     {f.original_title}
