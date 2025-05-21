@@ -1,3 +1,39 @@
+/* header */
+header {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.container {
+    max-width: 1400px;
+}
+
+form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+form input {
+    max-width: 250px;
+    height: 30px;
+
+}
+
+
+.logo img {
+    width: 30%;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* stars */
 i.fa-solid {
     color: gold;
 }
