@@ -56,3 +56,27 @@ main {
 i.fa-solid {
     color: gold;
 }
+
+.card-body {
+    background-color: black;
+    color: white;
+}
+
+/* hover */
+
+.card:hover {
+    /* display: block; */
+    transform: scale(1.30);
+    transition: 1.5s;
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover .card-img-top {
+    border-radius: 10px;
+    display: none;
+}
+
+.card:hover .card-body {
+    display: block;
+}
