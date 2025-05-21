@@ -1,6 +1,7 @@
 import React from 'react'
 
 import languageToFlag from '../function/FlagFunction';
+import createLink from '../function/PosterFunction';
 
 import { useFilm } from '../context/FilmContext'
 
@@ -8,10 +9,6 @@ import { useFilm } from '../context/FilmContext'
 const SerieList = () => {
 
     const { serie } = useFilm();
-
-    const createLink = (posterLink) => {
-        return "https://image.tmdb.org/t/p/w185" + posterLink;
-    }
 
     const createList = () => {
         return <ul>

@@ -1,16 +1,12 @@
 import React from 'react'
 import { useFilm } from '../context/FilmContext'
-import emojiFlags from 'emoji-flags';
 
 import languageToFlag from '../function/FlagFunction';
+import createLink from '../function/PosterFunction';
 
 const FilmList = () => {
 
     const { film } = useFilm();
-
-    const createLink = (posterLink) => {
-        return "https://image.tmdb.org/t/p/w185" + posterLink;
-    }
 
     const createList = () => {
         return <ul>
