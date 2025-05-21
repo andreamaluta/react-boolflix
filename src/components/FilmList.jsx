@@ -20,16 +20,16 @@ const FilmList = () => {
                                     <img src={createLink(f.poster_path)} alt="" className='card-img-top' />
                                     <div className="card-body">
                                         <div>
-                                            <h5>Titolo:</h5> {f.title}
+                                            <span>Titolo:</span> {f.title}
                                         </div>
                                         <div>
-                                            <h5>Titolo originale:</h5>{f.original_title}
+                                            <span>Titolo Originale</span>{f.original_title}
                                         </div>
                                         <div>
-                                            Lingua: {languageToFlag(f.original_language)}
+                                            <span>Lingua:</span> {languageToFlag(f.original_language)}
                                         </div>
                                         <div>
-                                            Valutazione: <Stars vote={f.vote_average} />
+                                            <span>Valutazione:</span> <Stars vote={f.vote_average} />
                                         </div>
                                         <span>Descrizione</span><p>{f.overview}</p>
                                     </div>
