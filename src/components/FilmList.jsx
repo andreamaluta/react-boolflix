@@ -8,6 +8,18 @@ const FilmList = () => {
 
     const { film } = useFilm();
 
+    const stars = (vote) => {
+        const finalVote = Math.round(vote / 2);
+        const star = [];
+        for (let i = 0; i < finalVote; i++) {
+            star.push(<i key={`full-${i}`} className="fa-solid fa-star"></i>);
+        }
+        for (let i = 0; i < 5 - finalVote; i++) {
+            star.push(<i key={`empty-${i}`} className="fa-regular fa-star" ></i >);
+        }
+        return star;
+    }
+
     const createList = () => {
         return <ul>
             {film.map((f) => (
@@ -20,7 +32,8 @@ const FilmList = () => {
                     <br />
                     {languageToFlag(f.original_language)}
                     < br />
-                    {f.vote_average}
+                    {Math.round(f.vote_average / 2)}
+                    {stars(f.vote_average)}
                 </li>
             ))}
         </ul>
