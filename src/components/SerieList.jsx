@@ -9,10 +9,16 @@ const SerieList = () => {
 
     const { serie } = useFilm();
 
+    const createLink = (posterLink) => {
+        return "https://image.tmdb.org/t/p/w185" + posterLink;
+    }
+
     const createList = () => {
         return <ul>
             {serie.map((item) => (
                 <li key={item.id}>
+                    <img src={createLink(item.poster_path)} alt="" />
+                    <br />
                     {item.name}
                     <br />
                     {item.original_name}
