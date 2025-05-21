@@ -31,6 +31,7 @@ const FilmList = () => {
                                         <div>
                                             Valutazione: <Stars vote={f.vote_average} />
                                         </div>
+                                        <span>Descrizione</span><p>{f.overview}</p>
                                     </div>
                                 </li>
                             </div>

@@ -22,17 +22,18 @@ const SerieList = () => {
                                     <img src={createLink(item.poster_path)} alt="" className='card-img-top' />
                                     <div className="card-body">
                                         <div>
-                                            <h5>Titolo:</h5> {item.name}
+                                            <span>Titolo:</span> {item.name}
                                         </div>
                                         <div>
-                                            <h5>Titolo originale:</h5>{item.original_name}
+                                            <span>Titolo originale:</span>  {item.original_name}
                                         </div>
                                         <div>
-                                            Lingua: {languageToFlag(item.original_language)}
+                                            <span>Lingua:</span> {languageToFlag(item.original_language)}
                                         </div>
                                         <div>
-                                            Valutazione: <Stars vote={item.vote_average} />
+                                            <span>Valutazione</span> <Stars vote={item.vote_average} />
                                         </div>
+                                        <span>Descrizione</span><p>{item.overview}</p>
                                     </div>
                                 </li>
                             </div>
